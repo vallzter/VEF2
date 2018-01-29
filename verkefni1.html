@@ -1,0 +1,72 @@
+
+Verkefni 1 
+------------------------------
+Valgeir Ingi Þórðarson
+
+1)
+Ubuntu er open source stýrikerfi fyrir tölvur sem er opið fyrir alla. Ubuntu er talið vera besta Linux server distributor sem hægt er að velja. Hentugur fyrir byrjendur. 
+Ubuntu er vanalega keyrt á einkatölvum en er einnig mjög vinsælt á netþjónum. Ubuntu er vinsælasta stýrikerfið sem keyrir í clouds sem er vinsælasta Linux distributionið. 
+Ubuntu server virkar nánast fyrir hvaða vélbúnað sem er og er notað til að þjóna upp vefsíðum, file shares og geymslu gagna. Linux keyrir 37% af öllum global vefsíðum og af þeim 37 prósentum er 36% af þeim ubuntu. Ubuntu er það hentugt að jafnvel microsoft notar það. 
+
+2)
+Apache er vinsælasti web server sem hægt er að finna. Það sem web server gerir er að taka á móti umsókn frá clients og respondar þeim umsóknum. Apache er vinsælasta útaf margra ástæða og hér eru nokkrar ástæður: Það er frítt. Það er open source svo allir sjá sem gerir því kleift að hver sem er getur lagað kóðan, uppfært hann eða lagað errors. Og það hentar fyrir allt hvort sem þú ert að gera litla vefsíðu með 1-2 síðum eða risastóra með yfir þúsund síðum og meir en milljón mans sækja á síðuna mánaðarlega. Það virkar fyrir bæði.
+
+NGINX var búið til í rauninni í sama tilgangi og apache en kom töluvert seinna út (2004). NGINX hefur fengið athygli fyrir að höndla traffík aðeins betur en apache. 
+
+3)
+Application servers eru notaðir til að translate'a forrit og vera keyrð á serverum.
+Common Gateway Interface (CGI) er tengill milli vafra og vefþjóna. Það er interface sem segir vefservernum hvernig á að færa data milli forrita. 
+Þú verður að hafa CGI aðgang til að keyra forrit á þinni vefsíðu.
+---
+mod_python er apache module sem keyrir python túlkin innan serversins. Með mod_python getur þú skrifað vefforrit í python sem keyra töluvert hraðar en venjulegur CGI og þú hefur aðgang
+að háþróaðri tækni sem heldur gagnagrunninum þínum tengdum.
+---
+FastCgi and SCGI: FastCgi er í grunnin mjög líkt og CGI en er alveg að verða úrelt tækni og það eru til betri möguleikar en að nota það. SCGI er í rauninni eins og FastCgi 
+en talið er að það sé einfaldara að nota það en FastCgi keyrir betur.
+---
+mod_wsgi er apache HTTP server module sem framvegar WSGI viðmót fyrir að hosta Python based vefforrit.
+---
+Gunicorn stytting fyrir green unicorn er python web server gateway interface HHTTP server. Web servers þurfa keyra á vefnum og halda um media files, myndir, css sem dæmi beint úr file systeminu. En þeir
+geta ekki haft samband við forrit eins og django og þá þarf maður til að keyra forritið og gefa þeim fyrirspurnir og svara þeim, þá kemur Gunicorn inni myndina og býr til Unix socket og vinnur úr þessu.
+Þannig það er The outside world--> web server --> Socket --> Gunicorn
+---
+uWSGI er software forrit sem miðar á það að develope full stack til að byggja hosting þjónustu og er skrifað í tungumálinu C.
+
+4)
+	Vafrinn fer á DNS server og þýðir adressuna í ip töluna á servernum,
+    vafrinn sendir svo HTTP request á serverinn, biður serverinn um afrit af vefsíðunni
+    fyrir notanda, þessi skilaboð eru send með TCP/IP, ef að serverinn samþykkir beiðnina frá notanda,
+    þá fær vafrinn send gögn frá síðunni í bútum, vafrinn pússlar þessu saman og og fær vefsíðuna.
+
+5)
+Pip er command tool sem er notað til að installa og sér um python aukapakkana, pip kom í stað easy_install. Það er í rauninni bara package manager.
+Þú getur notað það til að installa sérstökum libraries eða pökkum á þitt python forrit.
+
+6)
+Aðalmunurinn á HTTP/1 og HTTP/2 er að http2 er töluvert hraðari enda er http1 frá árinu 1999.
+Svona helstu munirnir eru að http2 er: 
+Http 2 styður queries multiplexing, headers compression, forgangsröðun og greindari pakka umstjórn. Það leiðir til minni tíðni og flýtir fyrir niðurhali á nýjum vefsíðum.
+Þú getur sent mörg requests í einu en í http1 gastu bara sent eina í einu.
+Binary en ekki texti.
+
+
+ 7)
+	Secure Shell (SSH) er network protocol sem leyfir notendum að nota örugga leið fyrir netþjónustu á óöruggum netum,
+    lykilorð geta verið leyst með mikilli árás en SSH keys eru næstum ómögulegt að leysa. Það er hentugt að nota SSH keys með
+    stórum verkefnum og þar sem maður þarf að geyma mikilvægar upplýsingar. En hinsvegar ef maður er bara með eitthvað lítið sem skiptir litlu
+    máli þá er það óþarfi.
+    
+
+
+8)  Two-factor authentication er t.d. þegar maður skráir sig inn á síðu og fær svo einhverskonar kóða eða link í mail til að klára að skrá sig inn.
+    Þetta er svosem ágætt öryggi en það er hinsvegar sá galli að ef hann hefur aðgang að passwordinu þínu þá er líklegt að þú notir það sama fyrir mailið þitt.
+
+
+9)  IPv6 er nýjasta útgáfan af IP. Ipv6 var hannað til að taka við af IPv4 því það er að verða úrelt og umferðin á netinu er alltaf að stækka. Þá þarf að styrkja IP
+
+
+
+
+
+
+
