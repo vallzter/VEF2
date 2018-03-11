@@ -44,4 +44,23 @@ g)7): sér um User-end.
 RESTful API er application sem notar HTTP request til að ná, setja, pósta og eyða gögnum.
 
 5.
+a)start line með hvaða method verði notað, og HTTP version header upplýsingar um sendanda,
+skilaboðin og tenginguna. Body upplysingar um hvað gerðist.
+
+b)start line með protocol version, status code og svo texti. Body er upplýsingar og stundum ekki, fer eftir requestinu.
+
+6.Það gerir þér kleyft að tengja saman aðganga á mismunandi síðum, eins og þegar þú ferð á spotify og tengir facebook við.
+
+
+
+
+
+8.# pip install geolocation-python
+  from geolocation.main import GoogleMaps
+  address = "Reykjavík"
+  gmaps = GoogleMaps(api_key='AIzaSyAOntI-H-kTTxqoJdGDxpwZPeTeobb9cyE')
+  location = gmaps.search(location=address)
+  result = location.first()
+  print(result.lat)
+  print(result.lng)
 
