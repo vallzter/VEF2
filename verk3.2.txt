@@ -1,0 +1,22 @@
+
+(ORM) er tækni sem gerir þér kleift að leita og vinna úr gögnum úr gagnagrunni með því að nota hlutbundin hugmyndafræði. 
+Þegar talað er um ORM, vísar flestir til library sem útfærir Object-Relational Mapping tækni, þar af leiðandi orðasambandið "ORM".
+
+Sem dæmi með pseudo tungumáli, ef þú ert að reyna sýna allar bækur sem voru skrifaðar af Linus þá
+myndiru gera það svona
+:
+
+book_list = new List();
+sql = "SELECT book FROM library WHERE author = 'Linus'";
+data = query(sql); // I over simplify ...
+while (row = data.next())
+{
+     book = new Book();
+     book.setAuthor(row.get('author');
+     book_list.add(book);
+}
+
+en með ORM library þá væri það svona:
+
+book_list = BookTable.query(author="Linus");
+
